@@ -41,9 +41,17 @@
   --fs-body-sm:    0.8125rem; /* 13px — Secondary metadata, timeline dates */
   --fs-mono-label: 0.75rem;   /* 12px — Monospace ALL-CAPS tech eyebrows */
 
+  /* Mobile Responsive Scale Overrides */
+  --fs-display-mobile: clamp(2.25rem, 8vw, 2.625rem); /* ~36px - 42px */
+  --fs-h1-mobile:      clamp(1.75rem, 6vw, 2.125rem); /* ~28px - 34px */
+  --fs-h2-mobile:      clamp(1.5rem, 5vw, 1.875rem);  /* ~24px - 30px */
+  --fs-h3-mobile:      clamp(1.1875rem, 4vw, 1.375rem);/* ~19px - 22px */
+  --fs-body-mobile:    0.9375rem;                     /* 15px */
+  --fs-meta-mobile:    0.75rem;                       /* 12px */
+
   /* Line Heights */
-  --lh-display:    1.15;
-  --lh-heading:    1.15;
+  --lh-display:    1.12;
+  --lh-heading:    1.18;
   --lh-body:       1.60;
   --lh-mono:       1.50;
 
@@ -68,6 +76,12 @@
   --space-128: 128px;
   --space-160: 160px;
 
+  /* Mobile Spacing Specifics */
+  --space-mobile-gutter:  18px;
+  --space-section-mobile: 80px;  /* 72px - 96px range */
+  --space-card-mobile:    20px;  /* 20px - 24px range */
+  --touch-target-min:     44px;
+
   /* ── RADIUS TOKENS ─────────────────────────────────────────────────────── */
   --radius-sm:   4px;    /* Tags, badges, code tags */
   --radius-md:   6px;    /* Buttons, inputs, sub-panels */
@@ -84,4 +98,5 @@
   /* ── LAYOUT METRICS ────────────────────────────────────────────────────── */
   --max-width: 1440px;
   --nav-height: 64px;
+  --nav-height-mobile: 58px;
 }

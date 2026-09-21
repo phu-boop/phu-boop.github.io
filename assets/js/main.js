@@ -11,26 +11,58 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Mobile Navigation Toggle
+ * Mobile Navigation Toggle & Accessibility
  */
 function initNav() {
   const toggleBtn = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
+  const navScrim = document.getElementById('nav-scrim');
 
   if (!toggleBtn || !navLinks) return;
 
-  toggleBtn.addEventListener('click', () => {
+  function openMenu() {
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    navLinks.classList.add('open');
+    if (navScrim) navScrim.classList.add('open');
+  }
+
+  function closeMenu() {
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('open');
+    if (navScrim) navScrim.classList.remove('open');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-    toggleBtn.setAttribute('aria-expanded', !isExpanded);
-    navLinks.classList.toggle('open');
+    if (isExpanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
   // Close nav when clicking a link
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('open');
+      closeMenu();
     });
+  });
+
+  // Close nav on click outside (scrim)
+  if (navScrim) {
+    navScrim.addEventListener('click', () => {
+      closeMenu();
+      toggleBtn.focus();
+    });
+  }
+
+  // Keyboard accessibility: Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && toggleBtn.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      toggleBtn.focus();
+    }
   });
 }
 
@@ -74,18 +106,49 @@ function initCopyActions() {
       const textToCopy = btn.getAttribute('data-copy');
       if (!textToCopy) return;
 
-      try {
-        await navigator.clipboard.writeText(textToCopy);
+      const setCopiedUI = () => {
         const originalHtml = btn.innerHTML;
         btn.classList.add('copied');
-        btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> [COPIED]`;
+        btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>[ COPIED TO CLIPBOARD ]</span>`;
         
         setTimeout(() => {
           btn.classList.remove('copied');
           btn.innerHTML = originalHtml;
-        }, 2200);
+        }, 2400);
+      };
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(textToCopy);
+          setCopiedUI();
+        } else {
+          // Fallback for older browsers or insecure origins
+          const textArea = document.createElement('textarea');
+          textArea.value = textToCopy;
+          textArea.style.position = 'fixed';
+          textArea.style.left = '-9999px';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+          setCopiedUI();
+        }
       } catch (err) {
-        console.error('Failed to copy to clipboard', err);
+        try {
+          const textArea = document.createElement('textarea');
+          textArea.value = textToCopy;
+          textArea.style.position = 'fixed';
+          textArea.style.left = '-9999px';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+          setCopiedUI();
+        } catch (fallbackErr) {
+          console.error('Failed to copy to clipboard', fallbackErr);
+        }
       }
     });
   });

@@ -167,6 +167,47 @@
   font-weight: 600;
 }
 
+/* ── RESPONSIVE DIAGRAM DISPLAY RULES ────────────────────────────────────── */
+.diagram-desktop {
+  display: block;
+}
+
+.diagram-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .diagram-desktop {
+    display: none !important;
+  }
+
+  .diagram-mobile {
+    display: block !important;
+  }
+
+  .diagram-container {
+    padding: var(--space-12);
+  }
+
+  .diagram-header {
+    font-size: 0.6875rem;
+    padding-bottom: var(--space-8);
+    margin-bottom: var(--space-12);
+  }
+
+  .diagram-tooltip {
+    position: static;
+    margin-top: var(--space-12);
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.6875rem;
+    padding: 8px 10px;
+    text-align: left;
+    white-space: normal;
+    border-color: var(--border-subtle);
+  }
+}
+
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
   .arch-path-pulse,
