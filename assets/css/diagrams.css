@@ -1,0 +1,176 @@
+/* ==========================================================================
+   BACKEND ARCHITECTURE DIAGRAMS & DATA FLOW VISUALS
+   Portfolio: Nguyễn Lê Anh Phú — Backend Software Engineer
+   Implements Section 8, 9, 10 of SKILL.md
+   ========================================================================== */
+
+.diagram-container {
+  width: 100%;
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-16);
+  display: flex;
+  flex-direction: column;
+}
+
+.diagram-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-16);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-label);
+  color: var(--text-muted);
+}
+
+.diagram-header-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-success);
+}
+
+.diagram-svg-wrap {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.diagram-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* ── SVG ELEMENT STYLES ─────────────────────────────────────────────────── */
+
+/* Architecture Nodes */
+.arch-node {
+  fill: var(--surface-raised);
+  stroke: var(--border-strong);
+  stroke-width: 1.5;
+  rx: 6px;
+  ry: 6px;
+  transition: stroke var(--duration-fast) var(--ease-out),
+              fill var(--duration-fast) var(--ease-out);
+  cursor: pointer;
+}
+
+.arch-node:hover {
+  stroke: var(--accent-primary);
+  fill: var(--surface-overlay);
+}
+
+.arch-node.node-secondary {
+  fill: var(--surface-raised);
+  stroke: rgba(121, 40, 202, 0.4);
+}
+
+.arch-node.node-secondary:hover {
+  stroke: var(--accent-secondary);
+}
+
+/* Node Text */
+.arch-node-title {
+  fill: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.arch-node-sub {
+  fill: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 400;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+/* Connector Lines & Data Flow Vectors */
+.arch-path-base {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 1.5;
+}
+
+.arch-path-pulse {
+  fill: none;
+  stroke: var(--accent-primary);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 18;
+  animation: stream-flow 4s linear infinite;
+}
+
+.arch-path-pulse.pulse-purple {
+  stroke: var(--accent-secondary);
+  stroke-dasharray: 6 22;
+  animation: stream-flow 4.5s linear infinite;
+}
+
+@keyframes stream-flow {
+  from {
+    stroke-dashoffset: 48;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Arrowheads */
+.arch-marker {
+  fill: var(--border-strong);
+}
+
+.arch-marker.cyan {
+  fill: var(--accent-primary);
+}
+
+/* Node Signal Dot */
+.node-signal {
+  fill: var(--accent-success);
+  animation: node-pulse 2s infinite ease-in-out;
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.3; }
+}
+
+/* Diagram interactive tooltip */
+.diagram-tooltip {
+  position: absolute;
+  bottom: var(--space-12);
+  right: var(--space-12);
+  background: var(--surface-overlay);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: opacity var(--duration-fast) var(--ease-out);
+  opacity: 0.95;
+}
+
+.diagram-tooltip span {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .arch-path-pulse,
+  .node-signal {
+    animation: none !important;
+  }
+}

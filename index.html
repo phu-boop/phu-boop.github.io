@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Nguyễn Lê Anh Phú — Backend Software Engineer portfolio. Building scalable, reliable distributed systems with Java, Spring Boot, TypeScript, Kafka, and Redis.">
+  <meta name="keywords"
+    content="Nguyễn Lê Anh Phú, Backend Engineer, Java, Spring Boot, Microservices, Kafka, Redis, Distributed Systems, Vietnam">
+  <meta name="author" content="Nguyễn Lê Anh Phú">
+  <meta name="theme-color" content="#080A0C">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nguyễn Lê Anh Phú — Backend Software Engineer">
+  <meta property="og:description"
+    content="Reliable backend systems, scalable APIs, and distributed architectures with Java, Spring Boot, and TypeScript.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://phu-boop.github.io/">
+
+  <title>Nguyễn Lê Anh Phú — Backend Software Engineer</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Design System -->
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/diagrams.css">
+</head>
+
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Navigation Header -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Home">
+        <span class="brand-bracket">[</span>AP<span class="brand-bracket">]</span>
+        <span>phu-boop.github.io</span>
+      </a>
+
+      <div class="nav-status" aria-label="System status">
+        <span class="status-dot"></span>
+        <span>SYSTEM: ONLINE</span>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Tech Stack</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#metrics" class="nav-link">Metrics</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/phu-boop" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm"
+          aria-label="GitHub Profile">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content">
+
+    <!-- 00 // HERO SECTION (Layout A: 58% / 42% Asymmetric Split) -->
+    <section class="section" id="hero">
+      <div class="container layout-hero-split">
+        <!-- Left: Major Typography & Engineering Statement (58%) -->
+        <div class="hero-content">
+          <div class="mono-label hero-eyebrow">
+            // BACKEND SOFTWARE ENGINEER
+          </div>
+          <h1 class="display-title hero-name">
+            NGUYỄN LÊ ANH PHÚ
+          </h1>
+          <div class="mono-code hero-subtitle">
+            JAVA / SPRING BOOT &bull; DISTRIBUTED SYSTEMS &bull; UTH IT
+          </div>
+
+          <p class="body-lg" style="margin-bottom: var(--space-24); color: var(--text-secondary); max-width: 580px;">
+            I build reliable backend systems, scalable APIs, and production-oriented software with Java, Spring Boot,
+            TypeScript, and modern infrastructure.
+          </p>
+
+          <div class="tag-group" style="margin-bottom: var(--space-32);">
+            <span class="tag-tech">Java 21</span>
+            <span class="tag-tech">Spring Boot 3.5</span>
+            <span class="tag-tech">TypeScript</span>
+            <span class="tag-tech">Kafka</span>
+            <span class="tag-tech">Redis</span>
+            <span class="tag-tech">PostgreSQL</span>
+            <span class="tag-tech">Docker</span>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: var(--space-16); flex-wrap: wrap;">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com/phu-boop" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <span>github.com/phu-boop</span>
+            </a>
+            <a href="#contact" class="link-arrow">
+              <span>Connect</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick Terminal Meta -->
+          <div
+            style="margin-top: var(--space-32); padding-top: var(--space-20); border-top: 1px solid var(--border-subtle); display: flex; gap: var(--space-24); flex-wrap: wrap;">
+            <div>
+              <span class="mono-label">FOCUS</span>
+              <div class="mono-code" style="color: var(--text-primary); font-weight: 500;">Distributed & Financial
+                Systems</div>
+            </div>
+            <div>
+              <span class="mono-label">LOCATION</span>
+              <div class="mono-code" style="color: var(--text-primary); font-weight: 500;">Ho Chi Minh City, VN</div>
+            </div>
+            <div>
+              <span class="mono-label">DEGREE</span>
+              <div class="mono-code" style="color: var(--text-primary); font-weight: 500;">UTH IT (GPA ~3.6)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real System Architecture Flow Visual (42%) -->
+        <div class="hero-visual">
+          <div class="diagram-container">
+            <div class="diagram-header">
+              <span>ARCH_TRACE // VOLTNEXUS_INGEST</span>
+              <div class="diagram-header-status">
+                <span class="status-dot"></span>
+                <span>STREAM: ACTIVE</span>
+              </div>
+            </div>
+
+            <div class="diagram-svg-wrap">
+              <svg class="diagram-svg" viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet"
+                aria-label="System Architecture Flow Diagram">
+                <defs>
+                  <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" class="arch-marker cyan" />
+                  </marker>
+                  <marker id="arrow-dim" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6"
+                    orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" class="arch-marker" />
+                  </marker>
+                </defs>
+
+                <!-- Connector Base Paths -->
+                <path d="M 100 65 L 180 65" class="arch-path-base" />
+                <path d="M 280 65 L 340 65" class="arch-path-base" />
+                <path d="M 230 95 L 230 160" class="arch-path-base" />
+                <path d="M 230 205 L 150 245" class="arch-path-base" />
+                <path d="M 230 205 L 310 245" class="arch-path-base" />
+
+                <!-- Connector Animated Data Pulses -->
+                <path d="M 100 65 L 180 65" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                <path d="M 280 65 L 340 65" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                <path d="M 230 95 L 230 160" class="arch-path-pulse pulse-purple" marker-end="url(#arrow-cyan)" />
+                <path d="M 230 205 L 150 245" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                <path d="M 230 205 L 310 245" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+
+                <!-- Node: Client Ingest -->
+                <g class="arch-node" data-node="CLIENT / IOT" data-role="Vehicle Telemetry Stream" data-latency="14ms"
+                  data-tech="HTTP/2 POST" tabindex="0" role="button">
+                  <rect x="15" y="40" width="85" height="50" class="arch-node" />
+                  <text x="57" y="62" class="arch-node-title">CLIENT / IOT</text>
+                  <text x="57" y="77" class="arch-node-sub">Telemetry Ingest</text>
+                  <circle cx="28" cy="50" r="3" class="node-signal" />
+                </g>
+
+                <!-- Node: API Gateway -->
+                <g class="arch-node" data-node="API GATEWAY" data-role="Routing, Rate Limiting & Auth"
+                  data-latency="2.1ms" data-tech="Spring Cloud Gateway :8080" tabindex="0" role="button">
+                  <rect x="180" y="35" width="100" height="60" class="arch-node"
+                    style="stroke: var(--border-accent);" />
+                  <text x="230" y="62" class="arch-node-title">API GATEWAY</text>
+                  <text x="230" y="78" class="arch-node-sub">:8080 Gateway</text>
+                </g>
+
+                <!-- Node: Auth / Identity -->
+                <g class="arch-node" data-node="IDENTITY SVC" data-role="JWT & RBAC Validation" data-latency="3.8ms"
+                  data-tech="Spring Security" tabindex="0" role="button">
+                  <rect x="340" y="40" width="100" height="50" class="arch-node" />
+                  <text x="390" y="62" class="arch-node-title">IDENTITY SVC</text>
+                  <text x="390" y="77" class="arch-node-sub">JWT / OAuth2</text>
+                </g>
+
+                <!-- Node: Kafka Event Bus -->
+                <g class="arch-node node-secondary" data-node="KAFKA CLUSTER" data-role="Distributed Message Broker"
+                  data-latency="0.8ms" data-tech="Apache Kafka Topics" tabindex="0" role="button">
+                  <rect x="175" y="160" width="110" height="45" class="arch-node node-secondary" />
+                  <text x="230" y="181" class="arch-node-title" style="fill: #D8B4FE;">KAFKA BUS</text>
+                  <text x="230" y="194" class="arch-node-sub">Partitioned Topics</text>
+                </g>
+
+                <!-- Node: Worker / Microservices -->
+                <g class="arch-node" data-node="CHARGING & PAYMENT" data-role="Event-driven Dispatch Services"
+                  data-latency="8.5ms" data-tech="Spring Boot 3.5" tabindex="0" role="button">
+                  <rect x="90" y="240" width="110" height="48" class="arch-node" />
+                  <text x="145" y="261" class="arch-node-title">CHARGING SVC</text>
+                  <text x="145" y="275" class="arch-node-sub">Worker Engine</text>
+                </g>
+
+                <!-- Node: Data & Cache -->
+                <g class="arch-node" data-node="REDIS + POSTGRESQL" data-role="Persistence & Fast Cache Layer"
+                  data-latency="1.2ms" data-tech="Redis + ACID DB" tabindex="0" role="button">
+                  <rect x="260" y="240" width="115" height="48" class="arch-node" />
+                  <text x="317" y="261" class="arch-node-title">REDIS / DB</text>
+                  <text x="317" y="275" class="arch-node-sub">State & Cache</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="diagram-tooltip">
+              Hover/tap node: <span>KAFKA BUS</span> &mdash; Topic Partitions [<span
+                style="color: var(--accent-success)">0.8ms</span>]
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 // ABOUT & ENGINEERING PHILOSOPHY (Layout B: 33% / 67% Split) -->
+    <section class="section" id="about">
+      <div class="container layout-editorial-split">
+        <!-- Left: Sticky Title & Background (33%) -->
+        <div class="editorial-sticky-col">
+          <div class="mono-label">01 // PHILOSOPHY</div>
+          <h2 class="section-title" style="margin-bottom: var(--space-16);">
+            ENGINEERING PRINCIPLES
+          </h2>
+          <p class="body-sm" style="margin-bottom: var(--space-24);">
+            I approach software engineering with a systems-first mindset: correctness over shortcuts, predictable
+            resource consumption under load, and strict data consistency guarantees.
+          </p>
+
+          <!-- Large-Scale Engineer Dossier Card -->
+          <div class="engineer-dossier-card">
+            <div class="dossier-terminal-header">
+              <span>SYS_ID // AP_2026</span>
+              <div style="display: flex; align-items: center; gap: 6px; color: var(--accent-success);">
+                <span class="status-dot"></span>
+                <span>ACTIVE</span>
+              </div>
+            </div>
+            <div class="dossier-body">
+              <div class="dossier-photo-wrapper">
+                <img src="assets/images/avatar.jpg" alt="Nguyễn Lê Anh Phú — Backend Software Engineer"
+                  class="dossier-photo" />
+                <span class="hud-bracket top-left"></span>
+                <span class="hud-bracket top-right"></span>
+                <span class="hud-bracket bottom-left"></span>
+                <span class="hud-bracket bottom-right"></span>
+                <div class="dossier-photo-tag">
+                  STATUS: READY_FOR_HIRE
+                </div>
+              </div>
+              <div class="dossier-profile-meta">
+                <div class="dossier-name">Nguyễn Lê Anh Phú</div>
+                <div class="dossier-spec">BACKEND SOFTWARE ENGINEER</div>
+                <div class="mono-code" style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
+                  University of Transport HCMC (UTH)
+                </div>
+              </div>
+              <div class="dossier-metrics">
+                <div class="dossier-metric-item">
+                  <span class="dossier-metric-key">EXPECTED GRADUATION</span>
+                  <span class="dossier-metric-val">CLASS OF 2026</span>
+                </div>
+                <div class="dossier-metric-item">
+                  <span class="dossier-metric-key">CUMULATIVE GPA</span>
+                  <span class="dossier-metric-val">~3.6 / 4.0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-surface card-dense" style="margin-bottom: var(--space-20);">
+            <span class="mono-label">ACADEMIC FOUNDATION</span>
+            <h3 class="h3" style="font-size: 1.125rem; margin-top: var(--space-4);">University of Transport HCMC</h3>
+            <p class="body-sm" style="margin-top: var(--space-4);">Bachelor of Information Technology (UTH)</p>
+            <div style="margin-top: var(--space-12); display: flex; gap: var(--space-16);">
+              <div>
+                <span class="mono-label">GRADUATION</span>
+                <div class="mono-code" style="color: var(--text-primary); font-weight: 600;">2026</div>
+              </div>
+              <div>
+                <span class="mono-label">CUMULATIVE GPA</span>
+                <div class="mono-code" style="color: var(--accent-primary); font-weight: 700;">~3.6 / 4.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-surface card-dense">
+            <span class="mono-label">PRIMARY ROLE TARGET</span>
+            <div class="mono-code" style="color: var(--text-primary); font-weight: 600; margin-top: var(--space-4);">
+              Backend Software Engineer
+            </div>
+            <p class="body-sm" style="margin-top: var(--space-4);">
+              Java / Spring Boot Backend Developer &middot; Distributed Systems &middot; Concurrency & Performance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: 3 Core Technical Pillars (67%) -->
+        <div class="editorial-content-col">
+          <!-- Pillar 1 -->
+          <article class="card-surface">
+            <div class="mono-label" style="color: var(--accent-primary); margin-bottom: var(--space-8);">
+              PILLAR 01 &mdash; TRANSACTIONAL INTEGRITY
+            </div>
+            <h3 class="h3" style="margin-bottom: var(--space-12);">
+              Data Consistency & Concurrency Protection
+            </h3>
+            <p class="project-desc" style="margin-bottom: var(--space-16);">
+              In financial and core workflows, transactional consistency cannot be compromised. I design ledger systems
+              where transaction logs remain the immutable single source of truth. Wallets and accounts are updated via
+              atomic database operations with optimistic concurrency control (<code class="mono-code"
+                style="color: var(--accent-primary);">wallet.version</code>) and automated retry loops (<code
+                class="mono-code">MAX_TRANSACTION_RETRIES = 3</code>) to protect against negative balance race
+              conditions.
+            </p>
+            <div class="tag-group">
+              <span class="tag-tech">Atomic Operations</span>
+              <span class="tag-tech">Optimistic Locking</span>
+              <span class="tag-tech">Decimal128 Precision</span>
+              <span class="tag-tech">Idempotent APIs</span>
+            </div>
+          </article>
+
+          <!-- Pillar 2 -->
+          <article class="card-surface">
+            <div class="mono-label" style="color: var(--accent-primary); margin-bottom: var(--space-8);">
+              PILLAR 02 &mdash; HIGH-THROUGHPUT PROCESSING
+            </div>
+            <h3 class="h3" style="margin-bottom: var(--space-12);">
+              Scalability via Chunking & Bounded Memory
+            </h3>
+            <p class="project-desc" style="margin-bottom: var(--space-16);">
+              Processing large volumes should never result in Out-Of-Memory crashes. I design memory-efficient batch
+              processing and report engines using incremental chunking and streaming writes. Validated by real-world
+              benchmarks exporting over 1,062,516 rows into 27,626 PDF pages across 426 sequential chunks with peak
+              memory contained at ~590 MB RSS.
+            </p>
+            <div class="tag-group">
+              <span class="tag-tech">1M+ Rows Handled</span>
+              <span class="tag-tech">Streaming Pipelines</span>
+              <span class="tag-tech">Redis Queue Workers</span>
+              <span class="tag-tech">Bounded RSS Memory</span>
+            </div>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="card-surface">
+            <div class="mono-label" style="color: var(--accent-primary); margin-bottom: var(--space-8);">
+              PILLAR 03 &mdash; DISTRIBUTED RESILIENCE
+            </div>
+            <h3 class="h3" style="margin-bottom: var(--space-12);">
+              Event-Driven Microservices & Observability
+            </h3>
+            <p class="project-desc" style="margin-bottom: var(--space-16);">
+              Real-world systems isolate domains to scale independently. I structure microservices communicating
+              asynchronously over Kafka event topics to decouple telemetry ingestion from transactional charging and
+              booking dispatch. Integrated with Prometheus and Grafana for metrics collection and k6 for automated
+              stress testing.
+            </p>
+            <div class="tag-group">
+              <span class="tag-tech">Apache Kafka</span>
+              <span class="tag-tech">Microservice Architecture</span>
+              <span class="tag-tech">Prometheus & Grafana</span>
+              <span class="tag-tech">k6 Load Testing</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 // TECHNICAL STACK MATRIX -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="mono-label">02 // TECHNICAL STACK</span>
+          <h2 class="section-title">ENGINEERING TOOLKIT & CAPABILITIES</h2>
+          <p class="section-subtitle">
+            Grouped by architectural layer. Focused on production-proven backend technologies, containerization, and
+            data consistency.
+          </p>
+        </div>
+
+        <div class="grid-stack-matrix">
+          <!-- Backend & Languages -->
+          <div class="card-surface">
+            <div class="mono-label" style="margin-bottom: var(--space-12); color: var(--accent-primary);">
+              // BACKEND RUNTIME & FRAMEWORKS
+            </div>
+            <div class="tag-group">
+              <span class="tag-tech">Java 21</span>
+              <span class="tag-tech">Spring Boot 3.5</span>
+              <span class="tag-tech">Spring Security</span>
+              <span class="tag-tech">RESTful APIs</span>
+              <span class="tag-tech">.NET 10</span>
+              <span class="tag-tech">ASP.NET Core</span>
+              <span class="tag-tech">Node.js</span>
+              <span class="tag-tech">Express.js</span>
+              <span class="tag-tech">TypeScript</span>
+            </div>
+          </div>
+
+          <!-- Databases & Caching -->
+          <div class="card-surface">
+            <div class="mono-label" style="margin-bottom: var(--space-12); color: var(--accent-primary);">
+              // DATA STORAGE & PERSISTENCE
+            </div>
+            <div class="tag-group">
+              <span class="tag-tech">PostgreSQL</span>
+              <span class="tag-tech">MongoDB</span>
+              <span class="tag-tech">SQL Server</span>
+              <span class="tag-tech">Redis Caching</span>
+              <span class="tag-tech">Decimal128</span>
+              <span class="tag-tech">Optimistic Locking</span>
+            </div>
+          </div>
+
+          <!-- Architecture & Messaging -->
+          <div class="card-surface">
+            <div class="mono-label" style="margin-bottom: var(--space-12); color: var(--accent-primary);">
+              // ARCHITECTURE & EVENT STREAMING
+            </div>
+            <div class="tag-group">
+              <span class="tag-tech">Microservices</span>
+              <span class="tag-tech">Apache Kafka</span>
+              <span class="tag-tech">Event-Driven Architecture</span>
+              <span class="tag-tech">Background Workers</span>
+              <span class="tag-tech">Distributed Processing</span>
+              <span class="tag-tech">Spring AI</span>
+              <span class="tag-tech">Gemini / RAG</span>
+              <span class="tag-tech">Vector DB / Ollama</span>
+            </div>
+          </div>
+
+          <!-- Infrastructure, CI/CD & Testing -->
+          <div class="card-surface">
+            <div class="mono-label" style="margin-bottom: var(--space-12); color: var(--accent-primary);">
+              // INFRASTRUCTURE, OBSERVABILITY & TESTING
+            </div>
+            <div class="tag-group">
+              <span class="tag-tech">Docker</span>
+              <span class="tag-tech">Docker Compose</span>
+              <span class="tag-tech">Kubernetes</span>
+              <span class="tag-tech">Minikube</span>
+              <span class="tag-tech">GitHub Actions CI</span>
+              <span class="tag-tech">Prometheus</span>
+              <span class="tag-tech">Grafana</span>
+              <span class="tag-tech">k6 Testing</span>
+              <span class="tag-tech">SonarQube</span>
+              <span class="tag-tech">Postman / Newman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 // FEATURED PROJECTS (Layout C: 50/50 Feature Cards + Detail Grid) -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="mono-label">03 // PRODUCTION PROJECTS</span>
+          <h2 class="section-title">SYSTEMS & ARCHITECTURE SHOWCASE</h2>
+          <p class="section-subtitle">
+            Engineered with deep focus on scalability, transactional safety, and distributed messaging.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: var(--space-48);">
+
+          <!-- FEATURE PROJECT 1: VoltNexus EV (Layout C: 50% / 50%) -->
+          <article class="card-surface">
+            <div class="layout-feature-split">
+              <!-- Left: Microservices Topology Preview -->
+              <div class="diagram-container">
+                <div class="diagram-header">
+                  <span>TOPOLOGY // VOLTNEXUS-EV-ECOSYSTEM</span>
+                  <div class="diagram-header-status">
+                    <span class="status-dot"></span>
+                    <span>10 SERVICES</span>
+                  </div>
+                </div>
+
+                <div class="diagram-svg-wrap">
+                  <svg class="diagram-svg" viewBox="0 0 440 280" preserveAspectRatio="xMidYMid meet">
+                    <!-- Connections -->
+                    <path d="M 220 50 L 220 100" class="arch-path-base" />
+                    <path d="M 220 50 L 80 100" class="arch-path-base" />
+                    <path d="M 220 50 L 360 100" class="arch-path-base" />
+
+                    <path d="M 220 140 L 220 180" class="arch-path-base" />
+                    <path d="M 80 140 L 160 180" class="arch-path-base" />
+                    <path d="M 360 140 L 280 180" class="arch-path-base" />
+
+                    <path d="M 220 220 L 140 250" class="arch-path-base" />
+                    <path d="M 220 220 L 300 250" class="arch-path-base" />
+
+                    <!-- Animated Pulses -->
+                    <path d="M 220 50 L 220 100" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                    <path d="M 220 50 L 80 100" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                    <path d="M 220 50 L 360 100" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                    <path d="M 220 140 L 220 180" class="arch-path-pulse pulse-purple" marker-end="url(#arrow-cyan)" />
+
+                    <!-- API Gateway -->
+                    <g class="arch-node" data-node="API GATEWAY" data-role="Edge Routing & Rate Limit"
+                      data-latency="2.1ms" data-tech="Spring Cloud Gateway :8080" tabindex="0">
+                      <rect x="155" y="15" width="130" height="38" class="arch-node"
+                        style="stroke: var(--border-accent);" />
+                      <text x="220" y="38" class="arch-node-title">API GATEWAY :8080</text>
+                    </g>
+
+                    <!-- Microservice Nodes -->
+                    <g class="arch-node" data-node="CHARGING SERVICE" data-role="Charging Session & Station Status"
+                      data-latency="9.2ms" data-tech="Spring Boot 3.5" tabindex="0">
+                      <rect x="25" y="100" width="110" height="40" class="arch-node" />
+                      <text x="80" y="125" class="arch-node-title">CHARGING SVC</text>
+                    </g>
+
+                    <g class="arch-node" data-node="BOOKING & PAYMENT" data-role="Slot Reservation & Wallet Deductions"
+                      data-latency="11.4ms" data-tech="Spring Boot 3.5" tabindex="0">
+                      <rect x="165" y="100" width="110" height="40" class="arch-node" />
+                      <text x="220" y="125" class="arch-node-title">PAYMENT SVC</text>
+                    </g>
+
+                    <g class="arch-node" data-node="CUSTOMER & IDENTITY" data-role="RBAC & User Profiles"
+                      data-latency="4.0ms" data-tech="Spring Security" tabindex="0">
+                      <rect x="305" y="100" width="110" height="40" class="arch-node" />
+                      <text x="360" y="125" class="arch-node-title">IDENTITY SVC</text>
+                    </g>
+
+                    <!-- Kafka Bus -->
+                    <g class="arch-node node-secondary" data-node="KAFKA EVENT BUS"
+                      data-role="Telemetry & Event Distribution" data-latency="1.1ms" data-tech="Apache Kafka"
+                      tabindex="0">
+                      <rect x="145" y="180" width="150" height="40" class="arch-node node-secondary" />
+                      <text x="220" y="204" class="arch-node-title" style="fill: #D8B4FE;">KAFKA EVENT STREAM</text>
+                    </g>
+
+                    <!-- Data & AI Layer -->
+                    <g class="arch-node" data-node="PROMETHEUS + GRAFANA" data-role="Observability Metrics Exporter"
+                      data-latency="Active" data-tech="Prometheus / k6" tabindex="0">
+                      <rect x="70" y="240" width="130" height="35" class="arch-node" />
+                      <text x="135" y="262" class="arch-node-title">OBSERVABILITY</text>
+                    </g>
+
+                    <g class="arch-node" data-node="SPRING AI / GEMINI RAG"
+                      data-role="Demand Forecasting & Smart Assistant" data-latency="Async" data-tech="Spring AI / RAG"
+                      tabindex="0">
+                      <rect x="235" y="240" width="135" height="35" class="arch-node" />
+                      <text x="302" y="262" class="arch-node-title">SPRING AI / RAG</text>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="diagram-tooltip">
+                  Hover/tap node: <span>API GATEWAY</span> &mdash; Spring Cloud Gateway [:8080]
+                </div>
+              </div>
+
+              <!-- Right: Engineering Context & Specs -->
+              <div class="project-card">
+                <div class="project-eyebrow">
+                  <span class="mono-label">JAVA 21 / SPRING BOOT 3.5 / KAFKA / REDIS / KUBERNETES</span>
+                </div>
+                <h3 class="project-title">VoltNexus EV &mdash; Enterprise EV Ecosystem</h3>
+                <p class="project-desc">
+                  <strong>Problem:</strong> Managing distributed electric vehicle charging stations requires handling
+                  intermittent high-frequency telemetry, strict booking slot reservations, and automated payment
+                  deduction without race conditions.
+                </p>
+                <p class="project-desc">
+                  <strong>Architecture:</strong> Engineered a ~10 microservice architecture fronted by Spring Cloud
+                  Gateway (:8080). Asynchronous vehicle telemetry streams through partitioned Kafka topics into worker
+                  services. State caching is maintained via Redis clusters, and system telemetry is monitored via
+                  Prometheus, Grafana, and automated k6 load tests. Integrated Spring AI and Gemini RAG for intelligent
+                  EV station demand forecasting.
+                </p>
+
+                <div class="project-metrics-grid">
+                  <div class="project-metric-item">
+                    <span class="project-metric-key">Microservices</span>
+                    <span class="project-metric-val">~10 Services</span>
+                  </div>
+                  <div class="project-metric-item">
+                    <span class="project-metric-key">Latency Target</span>
+                    <span class="project-metric-val">&lt; 12ms p99</span>
+                  </div>
+                  <div class="project-metric-item">
+                    <span class="project-metric-key">Communication</span>
+                    <span class="project-metric-val">Kafka + REST Gateway</span>
+                  </div>
+                  <div class="project-metric-item">
+                    <span class="project-metric-key">Testing & Quality</span>
+                    <span class="project-metric-val">k6, SonarQube, Trivy</span>
+                  </div>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/phu-boop/VoltNexus-EV-Enterprise-Ecosystem" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    <span>View Repository &rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- FEATURE PROJECT 2: Personal Expense Management (Layout C: 50% / 50%) -->
+          <article class="card-surface">
+            <div class="layout-feature-split">
+              <!-- Left: Background Export Worker Flow Visual -->
+              <div class="diagram-container">
+                <div class="diagram-header">
+                  <span>PIPELINE // 1M_ROW_EXPORT_WORKER</span>
+                  <div class="diagram-header-status">
+                    <span class="status-dot"></span>
+                    <span>BOUNDED MEMORY</span>
+                  </div>
+                </div>
+
+                <div class="diagram-svg-wrap">
+                  <svg class="diagram-svg" viewBox="0 0 440 280" preserveAspectRatio="xMidYMid meet">
+                    <!-- Connections -->
+                    <path d="M 90 70 L 170 70" class="arch-path-base" />
+                    <path d="M 280 70 L 330 70" class="arch-path-base" />
+                    <path d="M 225 100 L 225 160" class="arch-path-base" />
+                    <path d="M 225 205 L 140 245" class="arch-path-base" />
+                    <path d="M 225 205 L 310 245" class="arch-path-base" />
+
+                    <!-- Animated Pulses -->
+                    <path d="M 90 70 L 170 70" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                    <path d="M 280 70 L 330 70" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                    <path d="M 225 100 L 225 160" class="arch-path-pulse pulse-purple" marker-end="url(#arrow-cyan)" />
+                    <path d="M 225 205 L 140 245" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+                    <path d="M 225 205 L 310 245" class="arch-path-pulse" marker-end="url(#arrow-cyan)" />
+
+                    <!-- API Controller Node -->
+                    <g class="arch-node" data-node="EXPRESS API" data-role="Export Request Enqueue" data-latency="1.8ms"
+                      data-tech="Node.js / TypeScript" tabindex="0">
+                      <rect x="15" y="45" width="85" height="50" class="arch-node" />
+                      <text x="57" y="68" class="arch-node-title">EXPRESS API</text>
+                      <text x="57" y="82" class="arch-node-sub">Job Enqueue</text>
+                    </g>
+
+                    <!-- Redis Queue Node -->
+                    <g class="arch-node node-secondary" data-node="REDIS QUEUE" data-role="BullMQ / Redis Job Storage"
+                      data-latency="0.4ms" data-tech="Redis In-Memory" tabindex="0">
+                      <rect x="170" y="45" width="110" height="50" class="arch-node node-secondary" />
+                      <text x="225" y="68" class="arch-node-title" style="fill: #D8B4FE;">REDIS QUEUE</text>
+                      <text x="225" y="82" class="arch-node-sub">Job Buffer</text>
+                    </g>
+
+                    <!-- Export Worker Node -->
+                    <g class="arch-node" data-node="EXPORT WORKER" data-role="Chunked Stream Processing"
+                      data-latency="426 Chunks" data-tech="TypeScript Worker" tabindex="0">
+                      <rect x="165" y="160" width="120" height="48" class="arch-node"
+                        style="stroke: var(--border-accent);" />
+                      <text x="225" y="183" class="arch-node-title">EXPORT WORKER</text>
+                      <text x="225" y="196" class="arch-node-sub">Incremental Chunks</text>
+                    </g>
+
+                    <!-- MongoDB Node -->
+                    <g class="arch-node" data-node="MONGODB CURSOR" data-role="Indexed Cursor Stream"
+                      data-latency="Stream" data-tech="Decimal128 Engine" tabindex="0">
+                      <rect x="70" y="235" width="125" height="40" class="arch-node" />
+                      <text x="132" y="258" class="arch-node-title">MONGODB STREAM</text>
+                    </g>
+
+                    <!-- PDF / Disk Output -->
+                    <g class="arch-node" data-node="PDF/XLSX ENGINE" data-role="Incremental Stream Output (27k pages)"
+                      data-latency="71MB File" data-tech="Bounded ~590MB RSS" tabindex="0">
+                      <rect x="250" y="235" width="130" height="40" class="arch-node" />
+                      <text x="315" y="258" class="arch-node-title">STREAM WRITER</text>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="diagram-tooltip">
+                  Hover/tap node: <span>EXPORT WORKER</span> &mdash; 426 Chunks Streaming [~590MB RSS Peak]
+                </div>
+              </div>
+
+              <!-- Right: Engineering Context & Specs -->
+              <div class="project-card">
+                <div class="project-eyebrow">
+                  <span class="mono-label">REACT / EXPRESS / TYPESCRIPT / MONGODB / REDIS WORKERS</span>
+                </div>
+                <h3 class="project-title">Personal Expense Management &mdash; Financial Engine</h3>
+                <p class="project-desc">
+                  <strong>Problem:</strong> Financial tracking applications must guarantee exact account balances under
+                  rapid parallel mutations and prevent catastrophic memory exhaustion when exporting million-row
+                  datasets into structured documents.
+                </p>
+                <p class="project-desc">
+                  <strong>Architecture:</strong> Built on a strict Layered Architecture (Controller &rarr; Validator
+                  &rarr; Service &rarr; Repository &rarr; Worker). Transactions act as the immutable source of truth,
+                  updated atomically using MongoDB <code class="mono-code">Decimal128</code> and <code
+                    class="mono-code">decimal.js</code> for floating-point safety. Implemented wallet versioning and an
+                  optimistic concurrency retry mechanism (<code class="mono-code">MAX_TRANSACTION_RETRIES = 3</code>) to
+                  eliminate race conditions.
+                </p>
+                <p class="project-desc">
+                  <strong>Benchmark Result:</strong> Engineered a Redis-backed background worker pipeline capable of
+                  streaming <strong>1,062,516 rows</strong> across <strong>426 chunks</strong> into a
+                  <strong>27,626-page PDF (~71 MB)</strong> while keeping memory bounded at a peak RSS of ~590 MB
+                  without worker death.
+                </p>
+
+                <div class="project-metrics-grid">
+                  <div class="project-metric-item">
+                    <span class="project-metric-key">Export Benchmark</span>
+                    <span class="project-metric-val">1,062,516 Rows</span>
+                  </div>
+                  <div class="project-metric-item">
+                    <span class="project-metric-key">PDF Output</span>
+                    <span class="project-metric-val">27,626 Pages (~71MB)</span>
+                  </div>
+                  <div class="project-metric-item">
+                    <span class="project-metric-key">Peak Memory RSS</span>
+                    <span class="project-metric-val">~590 MB (No OOM)</span>
+                  </div>
+                  <div class="project-metric-item">
+                    <span class="project-metric-key">Concurrency</span>
+                    <span class="project-metric-val">Optimistic Versioning</span>
+                  </div>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/phu-boop/personal-expense-management" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    <span>View Repository &rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2-COLUMN DETAIL PROJECT GRID -->
+          <div class="grid-detail-projects">
+            <!-- Project 3: Core Banking System -->
+            <article class="card-surface">
+              <div class="project-eyebrow">
+                <span class="mono-label">GITLAB / JIRA / CONFLUENCE / ENTERPRISE CORE</span>
+              </div>
+              <h3 class="h3" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
+                Core Banking System (CBS)
+              </h3>
+              <p class="project-desc" style="margin-bottom: var(--space-16);">
+                Enterprise-grade banking backend engineered across segregated domain modules: Account, Core, Customer,
+                Foundation, and Identity. Emphasizes automated verification, branch lifecycle management, and idempotent
+                transaction settlement with GitLab CI and Jira/Confluence tracking.
+              </p>
+              <div class="tag-group" style="margin-bottom: var(--space-20);">
+                <span class="tag-tech">Account Domain</span>
+                <span class="tag-tech">Foundation</span>
+                <span class="tag-tech">Identity Domain</span>
+                <span class="tag-tech">CBS Core</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://gitlab.com/phu-boop/core-banking" target="_blank" rel="noopener noreferrer"
+                  class="link-arrow">
+                  <span>GitLab Repository</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 4: LMS Multi-Tenant -->
+            <article class="card-surface">
+              <div class="project-eyebrow">
+                <span class="mono-label">.NET 10 / ASP.NET CORE / NEXT.JS / MULTI-TENANCY</span>
+              </div>
+              <h3 class="h3" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
+                LMS &mdash; Learning Management System
+              </h3>
+              <p class="project-desc" style="margin-bottom: var(--space-16);">
+                Multi-tenant educational platform backend built with ASP.NET Core (.NET 10, <code
+                  class="mono-code">Aig.Lms.sln</code>) and Next.js frontend. Implements strict tenant data isolation
+                with a granular role matrix (<code class="mono-code">LMS_ADMIN</code>, <code
+                  class="mono-code">TENANT_ADMIN</code>, <code class="mono-code">CLIENT</code>) and decoupled modules
+                for Notifications, Ticketing, and Email dispatch.
+              </p>
+              <div class="tag-group" style="margin-bottom: var(--space-20);">
+                <span class="tag-tech">.NET 10</span>
+                <span class="tag-tech">ASP.NET Core</span>
+                <span class="tag-tech">Multi-Tenant</span>
+                <span class="tag-tech">Next.js</span>
+              </div>
+              <div class="project-actions">
+                <span class="mono-code" style="color: var(--text-muted); font-size: 0.75rem;">Repo: LMS-Source-3</span>
+              </div>
+            </article>
+
+            <!-- Project 5: TVDT Library Management -->
+            <article class="card-surface" style="grid-column: 1 / -1;">
+              <div class="project-eyebrow">
+                <span class="mono-label">.NET / SQL SERVER / DOCKER / MINIO / GOTENBERG / OLLAMA</span>
+              </div>
+              <h3 class="h3" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
+                TVDT Digital Library Management System
+              </h3>
+              <p class="project-desc" style="margin-bottom: var(--space-16);">
+                Document and digital asset management platform combining .NET backend services, SQL Server relational
+                models, and MinIO S3-compatible object storage. Integrates Gotenberg for high-fidelity document format
+                conversions and Ollama for local LLM-assisted document indexing and processing.
+              </p>
+              <div class="tag-group">
+                <span class="tag-tech">.NET Core</span>
+                <span class="tag-tech">MinIO S3 Storage</span>
+                <span class="tag-tech">Gotenberg Conversion</span>
+                <span class="tag-tech">Ollama LLM</span>
+                <span class="tag-tech">Docker Containerized</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 // EXPERIENCE & ENGINEERING HISTORY -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="mono-label">04 // EXPERIENCE & EXECUTION</span>
+          <h2 class="section-title">ENGINEERING TIMELINE</h2>
+          <p class="section-subtitle">
+            Hands-on backend development, system analysis, quality verification, and testing automation.
+          </p>
+        </div>
+
+        <div class="trace-log">
+          <!-- Timeline Item 1 -->
+          <div class="trace-item">
+            <span class="trace-node"></span>
+            <div class="trace-meta">
+              <span class="trace-date">6-MONTH INTERNSHIP</span>
+              <span class="trace-status">[PRODUCTION BACKEND]</span>
+            </div>
+            <h3 class="trace-role">Backend Developer Intern</h3>
+            <div class="trace-org">Hoàng Khánh Enterprise</div>
+            <ul class="trace-points">
+              <li class="trace-point">Developed and tested enterprise REST API endpoints adhering to layered
+                service-repository architecture.</li>
+              <li class="trace-point">Conducted system requirement analysis, database schema mapping, and end-to-end
+                technical documentation.</li>
+              <li class="trace-point">Collaborated closely with cross-functional teams to resolve transaction and data
+                querying edge cases.</li>
+            </ul>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="trace-item">
+            <span class="trace-node"></span>
+            <div class="trace-meta">
+              <span class="trace-date">FEATURED ECOSYSTEM</span>
+              <span class="trace-status">[DISTRIBUTED UAT & QA]</span>
+            </div>
+            <h3 class="trace-role">Backend Systems & Testing Lead</h3>
+            <div class="trace-org">VoltNexus EV Project</div>
+            <ul class="trace-points">
+              <li class="trace-point">Executed comprehensive User Acceptance Testing (UAT) across 10 microservices to
+                validate end-to-end booking and charging flows.</li>
+              <li class="trace-point">Configured automated API testing suites utilizing Postman, Newman CI, and k6
+                stress scripts to measure p99 response times.</li>
+              <li class="trace-point">Maintained issue tracking, sprint milestones, and architectural specs within Jira
+                and Confluence environments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 // KEY METRICS SPOTLIGHT -->
+    <section class="section" id="metrics">
+      <div class="container">
+        <div class="section-header">
+          <span class="mono-label">05 // VERIFIED METRICS</span>
+          <h2 class="section-title">PERFORMANCE & SCALE EVIDENCE</h2>
+          <p class="section-subtitle">
+            Real benchmark numbers demonstrating memory discipline, academic performance, and microservice scale.
+          </p>
+        </div>
+
+        <div class="grid-metrics">
+          <div class="metric-card">
+            <div class="metric-value accent" data-counter="1.06" data-prefix="~" data-suffix="M" data-decimals="2">1.06M
+            </div>
+            <div class="metric-label">ROWS EXPORTED</div>
+            <p class="metric-sub">1,062,516 records benchmarked across 426 sequential chunks in Personal Expense
+              Management.</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-value" data-counter="27626" data-prefix="" data-suffix="" data-decimals="0">27,626</div>
+            <div class="metric-label">PAGES GENERATED</div>
+            <p class="metric-sub">Single PDF document export (~71 MB) completed with bounded RSS memory at ~590 MB.</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-value accent" data-counter="10" data-prefix="~" data-suffix="+" data-decimals="0">~10
+            </div>
+            <div class="metric-label">MICROSERVICES</div>
+            <p class="metric-sub">Decomposed EV ecosystem communicating via Kafka event topics and Spring Cloud Gateway
+              (:8080).</p>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-value" data-counter="3.6" data-prefix="" data-suffix=" / 4.0" data-decimals="1">3.6 / 4.0
+            </div>
+            <div class="metric-label">CUMULATIVE GPA</div>
+            <p class="metric-sub">University of Transport Ho Chi Minh City (UTH) &mdash; Bachelor of Information
+              Technology.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 // CONTACT TERMINAL & DIRECT REACH -->
+    <section class="section" id="contact">
+      <div class="container layout-contact-split">
+        <!-- Left: Editorial text -->
+        <div>
+          <div class="mono-label">06 // DIRECT CONTACT</div>
+          <h2 class="section-title" style="margin-bottom: var(--space-16);">
+            LET'S DISCUSS BACKEND SYSTEMS
+          </h2>
+          <p class="body-lg" style="margin-bottom: var(--space-24); color: var(--text-secondary);">
+            I am actively looking for <strong>Backend Software Engineer</strong> and <strong>Backend Fresher</strong>
+            opportunities in Ho Chi Minh City or remote setups, specializing in Java, Spring Boot, distributed
+            messaging, and high-reliability APIs.
+          </p>
+          <div style="display: flex; gap: var(--space-12); flex-wrap: wrap;">
+            <a href="mailto:phudev23@gmail.com" class="btn btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>phudev23@gmail.com</span>
+            </a>
+            <button class="copy-btn" data-copy="phudev23@gmail.com" aria-label="Copy email address">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Terminal Window -->
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot close"></span>
+              <span class="terminal-dot min"></span>
+              <span class="terminal-dot max"></span>
+            </div>
+            <span class="terminal-title">phu@arch-terminal:~ (bash)</span>
+            <span>UTF-8</span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="terminal-prompt">$</span>cat ~/.engineer_profile.json</div>
+            <div class="mono-code" style="color: var(--text-primary); margin-top: 4px;">
+              {<br>
+              &nbsp;&nbsp;<span style="color: var(--accent-primary);">"name"</span>: "Nguyễn Lê Anh Phú",<br>
+              &nbsp;&nbsp;<span style="color: var(--accent-primary);">"role"</span>: "Backend Software Engineer",<br>
+              &nbsp;&nbsp;<span style="color: var(--accent-primary);">"location"</span>: "An Phú Đông, District 12,
+              HCMC, VN",<br>
+              &nbsp;&nbsp;<span style="color: var(--accent-primary);">"email"</span>: "phudev23@gmail.com",<br>
+              &nbsp;&nbsp;<span style="color: var(--accent-primary);">"github"</span>: "github.com/phu-boop",<br>
+              &nbsp;&nbsp;<span style="color: var(--accent-primary);">"linkedin"</span>:
+              "linkedin.com/in/nguyen-le-anh-phu-8392393a9",<br>
+              &nbsp;&nbsp;<span style="color: var(--accent-primary);">"status"</span>: <span
+                class="terminal-success">"READY_FOR_HIRE"</span><br>
+              }
+            </div>
+            <div style="margin-top: 12px;"><span class="terminal-prompt">$</span>curl -s https://api.phu-boop.dev/health
+            </div>
+            <div class="terminal-success">{"status": "UP", "uptime": "99.98%", "checks": ["kafka", "redis", "postgres"]}
+            </div>
+            <div style="margin-top: 12px;"><span class="terminal-prompt">$</span><span class="terminal-comment"># Ready
+                for collaboration. Ping me directly.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-meta">
+        <span style="color: var(--text-primary); font-weight: 600;">NGUYỄN LÊ ANH PHÚ &mdash; BACKEND SOFTWARE
+          ENGINEER</span>
+        <span>Architectural Engineering Terminal &middot; Designed for high-reliability systems</span>
+      </div>
+
+      <div style="display: flex; gap: var(--space-20); align-items: center;">
+        <a href="https://github.com/phu-boop" target="_blank" rel="noopener noreferrer" class="link-arrow">
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/nguyen-le-anh-phu-8392393a9" target="_blank" rel="noopener noreferrer"
+          class="link-arrow">
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:phudev23@gmail.com" class="link-arrow">
+          <span>Email</span>
+        </a>
+        <a href="#hero" class="btn btn-outline btn-sm">
+          <span>&uarr; Top</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/diagrams.js"></script>
+</body>
+
+</html>

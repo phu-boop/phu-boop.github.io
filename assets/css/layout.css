@@ -1,0 +1,237 @@
+/* ==========================================================================
+   LAYOUT & GRID SYSTEM
+   Portfolio: Nguyễn Lê Anh Phú — Backend Software Engineer
+   Implements strict asymmetric layouts (58/42, 33/67, 50/50) from SKILL.md
+   ========================================================================== */
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-64);
+  padding-right: var(--space-64);
+}
+
+/* Vertical Section Rhythm */
+.section {
+  padding-top: var(--space-128);
+  padding-bottom: var(--space-128);
+  position: relative;
+}
+
+.section-header {
+  margin-bottom: var(--space-48);
+}
+
+.section-header .mono-label {
+  display: inline-block;
+  margin-bottom: var(--space-8);
+  color: var(--accent-primary);
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-heading);
+}
+
+.section-subtitle {
+  font-size: var(--fs-body);
+  color: var(--text-muted);
+  margin-top: var(--space-8);
+  max-width: 640px;
+}
+
+/* ── ASYMMETRIC GRID ARCHITECTURES ───────────────────────────────────────── */
+
+/* LAYOUT A: Hero Architecture Split (58% / 42%) */
+.layout-hero-split {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  gap: var(--space-48);
+  align-items: center;
+  min-height: calc(100vh - var(--nav-height) - var(--space-96));
+  padding-top: calc(var(--nav-height) + var(--space-32));
+  padding-bottom: var(--space-64);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-eyebrow {
+  margin-bottom: var(--space-24);
+  display: inline-block;
+}
+
+.hero-name {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-16);
+  line-height: var(--lh-display);
+}
+
+.hero-subtitle {
+  color: var(--accent-primary);
+  font-size: 0.8125rem;
+  margin-bottom: var(--space-24);
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* LAYOUT B: Section Editorial Split (33% / 67%) */
+.layout-editorial-split {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  gap: var(--space-48);
+  align-items: start;
+}
+
+.editorial-sticky-col {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-32));
+}
+
+.editorial-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+/* LAYOUT C: Feature Project Card Split (50% / 50%) */
+.layout-feature-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-32);
+  align-items: stretch;
+}
+
+/* 2-Column Detail Project Grid */
+.grid-detail-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-32);
+}
+
+/* 3-Column Metrics Grid (Varied span for asymmetry) */
+.grid-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-20);
+}
+
+/* Tech Stack Asymmetric Matrix */
+.grid-stack-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-24);
+}
+
+/* Contact Asymmetric Split */
+.layout-contact-split {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: var(--space-48);
+  align-items: start;
+}
+
+/* Standard 12-Column Grid utility */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-24);
+}
+
+/* ── RESPONSIVE BREAKPOINT ADAPTATIONS ──────────────────────────────────── */
+
+/* Desktop Standard (1024px - 1439px) */
+@media (max-width: 1439px) {
+  .container {
+    padding-left: var(--space-48);
+    padding-right: var(--space-48);
+  }
+  .layout-hero-split {
+    grid-template-columns: 55% 45%;
+    gap: var(--space-32);
+  }
+  .layout-editorial-split {
+    grid-template-columns: 35% 65%;
+    gap: var(--space-32);
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .container {
+    padding-left: var(--space-32);
+    padding-right: var(--space-32);
+  }
+  .section {
+    padding-top: var(--space-96);
+    padding-bottom: var(--space-96);
+  }
+  .layout-hero-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-48);
+    padding-top: calc(var(--nav-height) + var(--space-48));
+    min-height: auto;
+  }
+  .layout-editorial-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+  .editorial-sticky-col {
+    position: static;
+  }
+  .layout-feature-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-24);
+  }
+  .grid-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-stack-matrix {
+    grid-template-columns: 1fr;
+  }
+  .layout-contact-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+}
+
+/* Mobile (375px - 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding-left: var(--space-20);
+    padding-right: var(--space-20);
+  }
+  .section {
+    padding-top: var(--space-64);
+    padding-bottom: var(--space-64);
+  }
+  .section-header {
+    margin-bottom: var(--space-32);
+  }
+  .display-title {
+    font-size: 2.5rem; /* 40px */
+  }
+  .h1 {
+    font-size: 2rem; /* 32px */
+  }
+  .h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+  .grid-detail-projects {
+    grid-template-columns: 1fr;
+  }
+  .grid-metrics {
+    grid-template-columns: 1fr;
+  }
+}
